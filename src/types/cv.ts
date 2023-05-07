@@ -1,5 +1,5 @@
 import { Skill } from './skill';
-import { User } from './user.ts';
+import { User } from './user';
 
 export type Cv  = {
   id: string;

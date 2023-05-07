@@ -1,0 +1,51 @@
+  type User {
+  id: String
+  name: String
+  email: String
+  role: String
+}
+  type Cv {
+  id: String
+  name: String
+  age: Int
+  job: String
+  user: User
+  }
+  type Skill {
+  id: String
+  designation: String
+  }
+  type CvWithSkills {
+    cv: Cv
+    skills: [Skill]
+    }
+  type Query {
+    hello: String
+    getAllCvs: [Cv]
+    getCvById(id: String): CvWithSkills
+  }
+  input AddCvInput {
+  name: String
+  age: Int
+  job: String
+  userId: String  
+  }
+  input UpdateCvInput {
+  name: String
+  age: Int
+  job: String
+  userId: String
+  skillIds: [String]
+  }
+
+  type Mutation {
+  addCv(input:AddCvInput):Cv
+  updateCv(id:String,input:UpdateCvInput):Cv
+  deleteCv(id: String): Cv
+  }
+
+  type Subscription {
+    newCv: Cv!
+    deleteCv: Cv!
+    updateCv: Cv!
+  }

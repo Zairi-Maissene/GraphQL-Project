@@ -4,7 +4,7 @@ import { UserRole } from '../types/user';
 export const users: User[] = [
   {
     id: "1",
-    name: "name",
+    name: "name1",
     email: "foulen@falte.com",
     role: UserRole.user
   },
@@ -16,13 +16,13 @@ export const users: User[] = [
   },
   {
     id: "3",
-    name: "name",
+    name: "name3",
     email: "foulen@falte.com",
     role: UserRole.user
   },
   {
     id: "4",
-    name: "name",
+    name: "name4",
     email: "foulen@falte.com",
     role: UserRole.user
   }
